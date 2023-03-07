@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Cheat Sheet</title>
+    <link href="./resources/css/styles.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="bg-pattern"></div>
+    <!-- HEADER -->
+    <h1>CSS Cheat Sheet</h1>
+
+    <h2 id="table-of-contents" class="box">Table of Contents</h2>
+    <ul class="box">
+      <li class="box-cell"><a class="contents-link" href="#container-properties">Container Properties</a></li>
+      <li class="box-cell"><a class="contents-link" href="#layout-properties">Layout Properties</a></li>
+      <li class="box-cell"><a class="contents-link" href="#color-properties">Color-Modifying Properties</a></li>
+      <li class="box-cell"><a class="contents-link" href="#typographical-properties">Typographical Properties</a></li>
+    </ul>
+
+
+    <!-- CONTAINER PROPERTIES -->
+    <h2 id="container-properties" class="box">Container Properties</h2>
+    <table class="box">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width">width</a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">height</a>
+            </h3>
+          </td>
+          <td class="value">Value in px, em, percentage, or keyword</td>
+          <td class="description">
+            Sets the dimensions of the content area if box-sizing property is
+            set to content-box, or the border area if box-sizing is set
+            to border-box.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding">padding</a>
+            </h3>
+          </td>
+          <td class="value">
+            Value in px, em, or percentage.
+          </td>
+          <td class="description">
+            Controls the space between the content and the margin.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border">border</a>
+            </h3>
+          </td>
+          <td class="value">
+            Width in px, rem, or keyword; style keyword; color.
+          </td>
+          <td class="description">
+            Sets the width, style, and color of the border around an element.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">margin</a>
+            </h3>
+          </td>
+          <td class="value">
+            Size in px, em, percentage or auto.
+          </td>
+          <td class="description">
+            Sets the space between an elements border and other elements.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">box-sizing</a>
+            </h3>
+          </td>
+          <td class="value">
+            content-box or border-box.
+          </td>
+          <td class="description">
+            Controls whether width/height take into account the added space from
+            padding and border width. Border-box sized elements total area will
+            be equal to the specified dimensions. Content-box will only
+            control the size of the content itself; the padding and border will
+            add onto the specified size.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- LAYOUT PROPERTIES -->
+    <h2 id="layout-properties" class="box">Layout Properties</h2>
+    <table class="box">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="property" rowspan="4">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">position</a>
+            </h3>
+          </td>
+          <td class="value">relative</td>
+          <td class="description">
+            Positions element relative to its parent.
+          </td>
+        </tr>
+        <tr>
+          <td class="value">absolute</td>
+          <td class="description">
+            Positions element relative to the entire page.
+          </td>
+        </tr>
+        <tr>
+          <td class="value">fixed</td>
+          <td class="description">
+            Positions element relative to initial container, but makes it stay
+            in that position regardless of scrolling.
+          </td>
+        </tr>
+        <tr>
+          <td class="value">sticky</td>
+          <td class="description">
+            Positions element as normal, but keeps element at defined position
+            when the viewport scrolls away from its parent element.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property" rowspan="4">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">display</a>
+            </h3>
+          </td>
+          <td class="value">block</td>
+          <td class="description">
+            The element may have a defined width and height, and will appear on
+            its own line.
+          </td>
+        </tr>
+        <tr>
+          <td class="value">inline</td>
+          <td class="description">
+            The element will only take up as much space as its content, and
+            may appear on the same line as other elements.
+          </td>
+        </tr>
+        <tr>
+          <td class="value">inline-block</td>
+          <td class="description">
+            The element may have a defined width and height, and may appear
+            on the same line as other elements.
+          </td>
+        </tr>
+        <tr>
+          <td class="value">none</td>
+          <td class="description">
+            The element is removed from the flow of the document as if it
+            doesnt exist; the space reserved for the element is removed.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index">z-index</a>
+            </h3>
+          </td>
+          <td class="value">
+            An integer number.
+          </td>
+          <td class="description">
+            Defines what order elements will render over eachother; 
+            lower z-indices will render below higher ones.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</a>
+            </h3>
+          </td>
+          <td class="value">left, right, both, none</td>
+          <td class="description">
+            Moves an element to the specified side of its container.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clear">clear</a>
+            </h3>
+          </td>
+          <td class="value">left, right, both, none</td>
+          <td class="description">
+            Determines if an element is moved below a preceding floating element;
+            for example, if text is meant to clear an element, it will move the
+            entire text element below the floating element instead of flowing
+            around it.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- COLOR PROPERTIES -->
+    <h2 id="color-properties" class="box">Color-Modifying Properties</h2>
+    <table class="box">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="property" rowspan="6">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color">color</a>
+            </h3>
+            <p>Sets color of foreground content.</p>
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-color">background-color</a>
+            </h3>
+            <p>Sets color of background behind content.</p>
+          </td>
+          <td class="value">keyword colors (e.g. midnightblue)</td>
+          <td class="description">
+            Sets color to one of the named color values.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="value">hexidecimal value (e.g. #FF8016)</td>
+          <td class="description">
+            Sets color as defined by a hexidecimal value;
+            each pair of digits corresponds to red, green,
+            and blue values respectively.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="value">RGB value (e.g. rgb(255, 0, 0))</td>
+          <td class="description">
+            Sets colour according to an RGB-defined value.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="value">RGBA value (e.g. rgba(255, 50, 65, 0.5))</td>
+          <td class="description">
+            Same as RGB, but includes parameter for 
+            alpha/opacity value between 0 and 1.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="value">HSL value (e.g. hsl(220, 75%, 50%))</td>
+          <td class="description">
+            Sets a color defined by its hue (value between 0 and 360),
+            and two percentages which defined the saturation and lightness
+            of the color.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="value">HSLA value (e.g. hsla(345, 80%, 20%, 0.25))</td>
+          <td class="description">
+            Same as HSL, but includes parameter for alpha/opacity value
+            between 0 and 1.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- TYPOGRAPHICAL PROPERTIES -->
+    <h2 id="typographical-properties" class="box">Typographical Properties</h2>
+    <table class="box">
+      <thead>
+        <th>Property</th>
+        <th>Value</th>
+        <th>Description</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a>
+            </h3>
+          </td>
+          <td class="value">
+            Font names (e.g. "Times New Roman", serif))
+          </td>
+          <td class="description">
+            Sets the typeface of text in the affected element.
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight</a>
+            </h3>
+          </td>
+          <td class="value">
+            Keywords (bold, lighter) or numbers between 0-1000
+          </td>
+          <td class="description">
+            Sets how thick/bold the given text appears.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">letter-spacing</a>
+            </h3>
+          </td>
+          <td class="value">
+            Values in terms of px or em.
+          </td>
+          <td class="description">
+            Sets the spacing between individual letters in the affected text.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing">word-spacing</a>
+            </h3>
+          </td>
+          <td class="value">
+            Values in terms of px or em.
+          </td>
+          <td class="description">
+            Sets the spacing between words in the affected text.
+          </td>
+        </tr>
+
+        <tr>
+          <td class="property">
+            <h3>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">line-height</a>
+            </h3>
+          </td>
+          <td class="value">
+            A unitless numerical scaling factor based on the initial spacing.
+          </td>
+          <td class="description">
+            Scales the default spacing between lines of affected
+            text by a given scaling factor. Values above 1 will increase the
+            spacing, for example.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </body>
+</html>
