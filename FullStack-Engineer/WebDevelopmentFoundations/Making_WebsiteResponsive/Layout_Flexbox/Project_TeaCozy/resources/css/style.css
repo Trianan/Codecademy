@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: seashell;
+    background-color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.2;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 69px;
+    padding: 0 10px;
+    border-bottom: 1px solid seashell;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+header img {
+    height: 50px;
+}
+header ul {
+    list-style: none;
+}
+header li {
+    display: inline;
+    margin-left: 20px;
+}
+header a {
+    color: seashell;
+}
+
+#mission {
+    width: 1200px;
+    height: 700px;
+    background-image: url("../img/mission-background.jpeg");
+    display: flex;
+    position: relative;
+    top: 69px;
+    align-items: center;
+}
+#mission div {
+    width: 100%;
+    padding: 9.5px;
+    background-color: black;
+    text-align: center;
+}
+
+#featured-tea, #locations {
+    margin-top: 69px;
+}
+
+#featured-tea {
+    width: 1000px;
+    text-align: center;
+    position: relative;
+    top: 69px;
+}
+#teas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#teas img {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+#locations {
+    width: 1200px;
+    height: 500px;
+    background-image: url("../img/locations-background.jpeg");
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 69px;
+    justify-content: center;
+    align-items: center;
+}
+#addresses {
+    display: flex;
+    justify-content: center;
+}
+#addresses div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 0 40px;
+    padding: 12px 0px;
+    background-color: black;
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    line-height: 1.8;
+    position: relative;
+    top: 69px;
+    text-align: center;
+}
+#contact-info * {
+    margin-bottom: 20px;
+}
+#copyright {
+    height: 69px;
+    float: left;
+    margin: 34.5px 0px 0px 20px;
+}
